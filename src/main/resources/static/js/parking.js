@@ -1,15 +1,16 @@
 function change_parking_state(lot_num, isBlank) {
-    if (lot_num < 2) {
+    if (lot_num > 20) {
         if (isBlank) {
-            parking_disabled_lots[lot_num].style.backgroundColor = color_red;
+            parking_disabled_lots[lot_num - 21].style.backgroundColor = color_red;
         } else {
-            parking_disabled_lots[lot_num].style.backgroundColor = color_green;
+            parking_disabled_lots[lot_num - 21].style.backgroundColor = color_green;
         }
     } else {
+        console.log(lot_num);
         if (isBlank) {
-            parking_lots[lot_num - 2].style.backgroundColor = color_red;
+            parking_lots[lot_num].style.backgroundColor = color_red;
         } else {
-            parking_lots[lot_num - 2].style.backgroundColor = color_green;
+            parking_lots[lot_num].style.backgroundColor = color_green;
         }
     }
 }
@@ -50,6 +51,8 @@ function responseAjax() {
     })
 }
 
+
+
 const parking_lots = document.getElementsByClassName("parking_lots");
 const parking_disabled_lots = document.getElementsByClassName("parking_disabled_lots");
 const parking_blanks_count = document.getElementById("blanks_count");
@@ -59,15 +62,24 @@ const resUrl = "/parking/update";
 const color_red = "#FF3636";
 const color_green = "#6dcc60";
 
-let blanks = [];
+
 const blank_list = {"parkingInfo": [1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0]};  // 전송 테스트 용
 
-responseAjax(); // 전송 테스트
-requestAjax();
+// let blanks = [];
+// responseAjax(); // 전송 테스트
+// requestAjax();
 
-setInterval(() => {
-    requestAjax();    
-}, 60000); 
+// setInterval(() => {
+//     requestAjax();    
+// }, 60000);   
+
+let test = JSON.parse(JSON.stringify(Parking));
+let blanks = test.parkingInfo.slice(1);
+
+console.log(blanks);
+for (let i = 0; i < blanks.length; i++) {
+    change_parking_state(i, blanks[i]);
+}
 
 let blanks_count = blanks.filter(element => 0 === element).length;
 let disabled_blanks_count = blanks.slice(0, 2).filter(element => 0 === element).length;

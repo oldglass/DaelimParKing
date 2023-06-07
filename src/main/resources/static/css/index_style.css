@@ -20,6 +20,14 @@
     justify-content: center;
 }
 
+
+.parking_disabled_lots {
+    width: 150px !important; 
+    height: 160px !important;
+    background-color: #3292ff;
+}
+
+
 .parking_lots_blank, .parking_lots {
     width: 100px; 
     height: 160px;
@@ -41,11 +49,6 @@
     display: flex;
 }
 
-.parking_disabled_lots {
-    width: 150px; 
-    height: 160px;
-    background-color: #3292ff;
-}
 
 .parking_blanks img, .parking_disabled_lots img {
     max-width: 80%;
