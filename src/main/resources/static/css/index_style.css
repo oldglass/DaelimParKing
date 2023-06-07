@@ -1,0 +1,66 @@
+.parking_ground {
+    width: 900px; 
+    height: 680px; 
+    /* background-color: #252525;  */
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 55%;
+    margin: 20px 70px;
+}
+
+.parking_lines {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #252525;
+}
+
+.parking_lots, .parking_disabled_lots {
+    border: 10px double #252525;
+    justify-content: center;
+}
+
+.parking_lots_blank, .parking_lots {
+    width: 100px; 
+    height: 160px;
+    justify-content: center;    
+}
+
+.parking_lots {
+    background-color: #ffffff;  
+    flex: 1 1;
+}
+
+.parking_blanks {
+    width: 100px; 
+    height: 100px; 
+    background-color: #252525; 
+    flex: 1 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.parking_disabled_lots {
+    width: 150px; 
+    height: 160px;
+    background-color: #3292ff;
+}
+
+.parking_blanks img, .parking_disabled_lots img {
+    max-width: 80%;
+    margin: auto;
+    display: block;
+    
+}
+
+#parking_main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside {
+    flex: 1 1 25%;
+    justify-content: center;
+    margin-top: 20px;
+}
