@@ -4,7 +4,7 @@ function change_parking_state(lot_num, isBlank) {
             parking_disabled_lots[lot_num].style.backgroundColor = color_red;
         } else {
             parking_disabled_lots[lot_num].style.backgroundColor = color_green;
-        }    
+        }
     } else {
         if (isBlank) {
             parking_lots[lot_num - 2].style.backgroundColor = color_red;
