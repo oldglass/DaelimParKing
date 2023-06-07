@@ -62,7 +62,7 @@ const color_green = "#6dcc60";
 let blanks = [];
 const blank_list = {"parkingInfo": [1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0]};  // 전송 테스트 용
 
-// responseAjax(); // 전송 테스트
+responseAjax(); // 전송 테스트
 requestAjax();
 
 setInterval(() => {
