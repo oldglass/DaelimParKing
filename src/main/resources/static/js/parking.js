@@ -84,7 +84,8 @@ setInterval(() => {
     data = JSON.parse(JSON.stringify(Parking));
     blanks = data.parkingInfo.slice(1);
     changeFromFile();
-}, 6000);
+    console.log("object");
+}, 3000);
 
 let blanks_count = blanks.filter(element => 0 === element).length;
 let disabled_blanks_count = blanks.slice(21, 23).filter(element => 0 === element).length;
