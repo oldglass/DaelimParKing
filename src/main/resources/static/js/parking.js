@@ -76,11 +76,13 @@ const color_green = "#6dcc60";
 //     requestAjax();    
 // }, 60000);   
 
-let test = JSON.parse(JSON.stringify(Parking));
-let blanks = test.parkingInfo.slice(1);
-
+let data = JSON.parse(JSON.stringify(Parking));
+let blanks = data.parkingInfo.slice(1);
 changeFromFile();
+
 setInterval(() => {
+    data = JSON.parse(JSON.stringify(Parking));
+    blanks = data.parkingInfo.slice(1);
     changeFromFile();
 }, 6000);
 
