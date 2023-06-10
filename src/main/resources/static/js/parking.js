@@ -87,7 +87,7 @@ setInterval(() => {
 }, 6000);
 
 let blanks_count = blanks.filter(element => 0 === element).length;
-let disabled_blanks_count = blanks.slice(22, 24).filter(element => 0 === element).length;
+let disabled_blanks_count = blanks.slice(21, 23).filter(element => 0 === element).length;
 
 parking_blanks_count.innerText += ` ${blanks_count - disabled_blanks_count}개`;
 parking_disabled_blanks_count.innerText += ` ${disabled_blanks_count}개`;
