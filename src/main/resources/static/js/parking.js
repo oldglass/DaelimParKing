@@ -88,7 +88,7 @@ changeFromFile();
 
 setInterval(() => {
     changeFromFile();
-}, 10000);
+}, 5000);
 
 /* ajax로 DTO에 값을 보낼 때 사용한다. 
 const blank_list = {"parkingInfo": [1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0]};  // 전송 테스트 용
